@@ -1,5 +1,5 @@
 class Review < ApplicationRecord
-  belongs_to :product
+  belongs_to :product, counter_cache: true
   validates :author, :presence => true
   validates :content, :presence => true,
             :length => { :minimum => 50, :maximum => 250 }

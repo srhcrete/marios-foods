@@ -20,7 +20,7 @@ p "Created #{Product.count} products"
   Review.create!(author: Faker::GameOfThrones.character,
   content: Faker::Lorem.characters(250),
   rating: Faker::Number.between(1,5),
-  product_id: Faker::Number.between(1,30))
+  product_id: Faker::Number.between(Product.first.id, Product.last.id))
 end
 
 p "Created #{Review.count} reviews"
