@@ -7,7 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Product.destroy_all
 Review.destroy_all
-User.destroy_all
 
 50.times do |index|
   Product.create!(name: Faker::Food.dish,
@@ -15,12 +14,13 @@ User.destroy_all
   countryOrigin: Faker::Address.country)
 end
 
-50.times do |index|
-  User.create!(username: Faker::GameOfThrones.character)
-end
+p "Created #{Product.count} products"
 
 250.times do |index|
   Review.create!(author: Faker::GameOfThrones.character,
-  content: Faker::Lorem.paragraphs(3, true),
-  rating: Faker::Number.between(1,5))
+  content: Faker::Lorem.characters(250),
+  rating: Faker::Number.between(1,5),
+  product_id: Faker::Number.between(1,30))
 end
+
+p "Created #{Review.count} reviews"
