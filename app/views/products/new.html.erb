@@ -1,0 +1,7 @@
+<h3>Add a new product</h3>
+<%= render 'form' %>
+
+<h1>Products</h1>
+<% @products.each do |product| %>
+  <li><%= link_to product.name, product_reviews_path(product) %></li>
+  <% end %>

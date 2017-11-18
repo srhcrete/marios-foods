@@ -2,10 +2,16 @@
 
 <hr>
 
+<h3>Featured Product:</h3>
 <%= link_to @featured.name, product_reviews_path(@featured) %>
 
 <hr>
 
+<h3>Newest Products:</h3>
 <% @lastThree.each do |product| %>
   <li><%= link_to product.name, product_reviews_path(product) %></li>
 <% end %>
+
+<hr>
+
+<%= link_to "See all products", new_product_path %>
