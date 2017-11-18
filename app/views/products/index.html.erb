@@ -3,13 +3,13 @@
 <hr>
 
 <h3>Featured Product:</h3>
-<%= link_to @featured.name, product_reviews_path(@featured) %>
+<%= link_to @featured.name, product_path(@featured) %>
 
 <hr>
 
 <h3>Newest Products:</h3>
 <% @lastThree.each do |product| %>
-  <li><%= link_to product.name, product_reviews_path(product) %></li>
+  <li><%= link_to product.name, product_path(product) %></li>
 <% end %>
 
 <hr>
