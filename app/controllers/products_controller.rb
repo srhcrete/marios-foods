@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
 
   def new
     @products = Product.all
-    @newProduct = Product.new
+    @product = Product.new
   end
 
   def create
