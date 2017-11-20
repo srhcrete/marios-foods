@@ -1,12 +1,19 @@
 <h1><%= @product.name %></h1>
 <h3>Price: $<%= @product.cost %></h3>
 <h3>Country of Origin: <%= @product.country %></h3>
-
+<br>
+<hr>
+<br>
 <p><%= link_to 'See Product Reviews', product_reviews_path(@product) %></p>
-
-<p><%= link_to "Edit", edit_product_path(@product) %></p>
-<p><%= link_to "Delete", product_path(@product),
-                         :data => {:confirm => "You sure?",
-                                   :method => "delete"} %></p>
-
+<br>
+<hr>
+<br>
+<h3>Admin</h3>
+<p><%= link_to 'Edit Product Details', edit_product_path(@product) %>
+<p><%= link_to "Delete this Product", product_path(@product),
+                           :data => {:confirm => "You sure?",
+                                     :method => "delete"} %></p>
+<br>
+<hr>
+<br>
 <p><%= link_to 'Return to Products', products_path %></p>
