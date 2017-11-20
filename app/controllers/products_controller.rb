@@ -12,6 +12,13 @@ class ProductsController < ApplicationController
   def create
     @products = Product.all
     @product = Product.new(product_params)
+    if @product.save
+      flash[:notice] = "Product successfully added!"
+      redirect_to products_path
+    else
+      flash[:notice] = "Your product was not added."
+      render :new
+    end
   end
 
   def show
