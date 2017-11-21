@@ -1,13 +1,25 @@
 <h1><%= @product.name %></h1>
 <h3>Price: $<%= @product.cost %></h3>
 <h3>Country of Origin: <%= @product.country %></h3>
+<p><%= link_to 'Write a Review!', new_product_review_path(@product) %></p>
+
 <br>
 <hr>
 <br>
-<p><%= link_to 'See Product Reviews', product_reviews_path(@product) %></p>
+
+<% if @product.reviews.any? %>
+  <% @product.reviews.each do |review| %>
+    <h4>product rating: <%= review.rating %></h4>
+    <h4>author: <%= review.author %></h4>
+    <p>review content: <%= review.content %></p>
+  <% end %>
+<% else %>
+  <p>There are no reviews for this product. <%= link_to "Add One Here!", new_product_review_path(@product)%><p>
+<% end %>
 <br>
 <hr>
 <br>
+
 <h3>Admin</h3>
 <p><%= link_to 'Edit Product Details', edit_product_path(@product) %>
 <p><%= link_to "Delete this Product", product_path(@product),
@@ -16,4 +28,5 @@
 <br>
 <hr>
 <br>
+
 <p><%= link_to 'Return to Products', products_path %></p>
