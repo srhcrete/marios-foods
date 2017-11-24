@@ -1,11 +1,17 @@
 @import 'bootstrap';
 
 @font-face {
-  font-family: "philosopher";
-  src: url(Philosopher-Italic.ttf) format('truetype');
+  font-family: 'philosopher';
+  src:font-url('Philosopher-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'raleway';
+  src:font-url('Raleway-Light.ttf') format('truetype');
 }
 
 body {
+  font-family: raleway;
   background: url(cool-food.jpg) no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -14,16 +20,17 @@ body {
 }
 
 html a {
+  font-family: philosopher;
   color: #f4e5d7;
   text-shadow: 0.01px 0.01px 0.01px black;
 }
 
 html a:hover {
-  color: #ce4527;
+  color: #ff8d23;
 }
 
 header {
-  font-family: philosopher;
+  font-family: raleway;
   padding: 50px;
   width: 100%;
   background-color: rgba(128, 143, 208, 0.75);
@@ -33,32 +40,83 @@ header {
 .form_button {
   background-color: #5072a8;
   border: none;
+  float: left;
 }
 
 .form_text_field {
-
+  display: inline-block;
+  float: left;
+  background-color: #f4e5d7;
+  border-style: none;
+  margin-bottom: 6px;
 }
 
-// .text_card {
-//   padding: 10px;
-//   vertical-align: center;
-//   border-radius: 25px;
-//   border-color: brown;
-//   background-color: rgba(106, 106, 200, 0.75);
-// }
+.form_text_content {
+  width: 70%;
+  margin-bottom: 6px;
+  display: inline-block;
+  float: left;
+  background-color: #f4e5d7;
+  border-style: none;
+}
+
+.form_label {
+  padding-left: 20px;
+  display: block;
+  width: 10%;
+  float: left;
+  clear: left;
+  text-align: left;
+}
+
+.product_form_field {
+  width: 50%;
+  display: inline-block;
+  float: left;
+  background-color: #f4e5d7;
+  border-style: none;
+  margin-bottom: 6px;
+}
+
+.product_form_label {
+  padding-left: 20px;
+  display: block;
+  width: 20%;
+  float: left;
+  clear: left;
+  text-align: left;
+}
+
+.product_form_button {
+  background-color: #5072a8;
+  border: none;
+  float: right;
+}
+
+.text_card {
+  padding: 10px;
+  vertical-align: center;
+  border-radius: 25px;
+  background-color: rgba(106, 106, 200, 0.75);
+}
 
 .card {
-  margin-left: 30px;
+  width: 86%;
+  margin-left: 8%;
   margin-right: 30px;
   padding: 20px;
   vertical-align: center;
-  border-style: inset;
+  border-style: none;
   border-radius: 23px;
   background-color: rgba(128, 143, 208, 0.80);
 }
 
 .product_card {
-  margin-left: 30px;
+  height: 30%;
+  width: 77%;
+  overflow: scroll;
+  overflow-x: hidden;
+  margin-left: 10%;
   margin-right: 30px;
   padding: 20px;
   vertical-align: center;
@@ -68,4 +126,46 @@ header {
 
 li {
   list-style: none;
+}
+
+br {
+  clear: both;
+}
+
+.comments_container {
+  display: block;
+  float: left;
+  height: 300px;
+  width: 86%;
+  overflow: scroll;
+  overflow-x: hidden;
+  margin-left: 6%;
+  margin-right: 30px;
+  padding: 20px;
+  vertical-align: center;
+  border-style: none;
+  border-radius: 23px;
+  background-color: rgba(128, 143, 208, 0.80);
+}
+
+.comment_head {
+  width: 40%;
+  float: left;
+  margin-left: 14px;
+  top: 2px;
+  border-radius: 23px;
+  padding: 20px;
+  background-color: rgba(106, 106, 200, 0.75);
+  color: #f4e5d7;
+}
+
+.comment_content {
+  float:right;
+  width: 90%;
+  border-radius: 23px;
+  word-wrap: break-word;
+  background: #f4e5d7;
+  padding: 12px;
+  font-size: 15px;
+  color: #595959;
 }

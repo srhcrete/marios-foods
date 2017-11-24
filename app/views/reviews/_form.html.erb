@@ -2,11 +2,11 @@
 
 
 <%= form_for [@product, @review] do |f| %>
-  <%= f.label :author%>
-  <%= f.text_field :author %>
-  <%= f.label :content%>
-  <%= f.text_field :content %>
-  <%= f.label :rating%>
-  <%= f.number_field :rating %>
-  <%= f.submit %>
+  <%= f.label :author, :class => 'form_label'%>
+  <%= f.text_field :author, :class => 'form_text_field' %>
+  <%= f.label :content, :class => 'form_label'%>
+  <%= f.text_area :content, :class => 'form_text_content', rows: 5 %>
+  <%= f.label :rating, :class => 'form_label'%>
+  <%= f.number_field :rating, :class => 'form_text_field' %><br>
+  <%= f.submit :submit, :class => 'form_button' %>
 <% end %>
