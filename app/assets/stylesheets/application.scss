@@ -1,0 +1,33 @@
+@import 'bootstrap';
+
+body {
+  background: url(cool-food.jpg) no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+header {
+  padding: 50px;
+  width: 100%;
+  background-color: rgba(128, 143, 208, 0.75);
+  z-index: 1
+}
+
+.form_button {
+  background-color: #5072a8;
+}
+
+.form_text_field {
+
+}
+
+.card {
+  margin-left: 30px;
+  margin-right: 30px;
+  padding: 20px;
+  vertical-align: center;
+  border-style: inset;
+  background-color: rgba(128, 143, 208, 0.75);
+}

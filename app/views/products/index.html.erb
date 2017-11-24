@@ -1,17 +1,21 @@
-<h1>Products</h1>
-
-<hr>
-
-<h3>Featured Product:</h3>
-<%= link_to @featured.name, product_path(@featured) %>
-
-<hr>
-
-<h3>Newest Products:</h3>
-<% @lastThree.each do |product| %>
-  <li><%= link_to product.name, product_path(product) %></li>
-<% end %>
-
-<hr>
-
-<%= link_to "See all products", new_product_path %>
+<br><br><br>
+<div class="card">
+  <p>We sell food products. Specialty ones. Fuhgeddaboudit.</p>
+</div>
+<br><br><br>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <h3>Featured Product:</h3>
+      <%= link_to @featured.name, product_path(@featured) %>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <h3>Newest Products:</h3>
+      <% @lastThree.each do |product| %>
+      <li><%= link_to product.name, product_path(product) %></li>
+      <% end %>
+    </div>
+  </div>
+</div>

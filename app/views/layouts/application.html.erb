@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MariosFoods</title>
+    <title>Mario's Specialty Foods</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+  <header>
+    <h1>Welcome to Marios Specialty Food Products</h1>
+    <%= link_to "See all products", new_product_path %>
+    <%= link_to 'Return to Home', products_path %>
+  </header>
   <body>
     <%= yield %>
   </body>

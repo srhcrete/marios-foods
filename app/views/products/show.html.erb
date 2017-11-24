@@ -1,32 +1,29 @@
-<h1><%= @product.name %></h1>
-<h3>Price: $<%= @product.cost %></h3>
-<h3>Country of Origin: <%= @product.country %></h3>
-<p><%= link_to 'Write a Review!', new_product_review_path(@product) %></p>
+<br><br><br>
+<div class="card">
+  <h1><%= @product.name %></h1>
+  <h3>Price: $<%= @product.cost %></h3>
+  <h3>Country of Origin: <%= @product.country %></h3>
+  <p><%= link_to 'Write a Review!', new_product_review_path(@product) %></p>
+</div>
 
-<br>
-<hr>
-<br>
-
-<% if @product.reviews.any? %>
+<br><br>
+<div class="card">
+  <% if @product.reviews.any? %>
   <% @product.reviews.each do |review| %>
-    <h4>product rating: <%= review.rating %></h4>
-    <h4>author: <%= review.author %></h4>
-    <p>review content: <%= review.content %></p>
+  <h4>Rating: <%= review.rating %></h4>
+  <h4>Author: <%= review.author %></h4>
+  <p><%= review.content %></p>
   <% end %>
-<% else %>
+  <% else %>
   <p>There are no reviews for this product. <%= link_to "Add One Here!", new_product_review_path(@product)%><p>
-<% end %>
-<br>
-<hr>
-<br>
+    <% end %>
+</div>
 
-<h3>Admin</h3>
-<p><%= link_to 'Edit Product Details', edit_product_path(@product) %>
-<p><%= link_to "Delete this Product", product_path(@product),
-                           :data => {:confirm => "You sure?",
-                                     :method => "delete"} %></p>
-<br>
-<hr>
-<br>
-
-<p><%= link_to 'Return to Products', products_path %></p>
+<br><br>
+<div class="card">
+  <h3>Admin</h3>
+  <p><%= link_to 'Edit Product Details', edit_product_path(@product) %>
+    <p><%= link_to "Delete this Product", product_path(@product),
+    :data => {:confirm => "You sure?",
+      :method => "delete"} %></p>
+</div>

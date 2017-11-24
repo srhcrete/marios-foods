@@ -1,16 +1,16 @@
-<h3>Add a new product</h3>
-<p>
-  <%= flash[:notice] %>
-</p>
-<%= render 'form' %>
+<br><br><br>
+<div class="card">
+  <h3>Add a new product</h3>
+  <p>
+    <%= flash[:notice] %>
+  </p>
+  <%= render 'form' %>
+</div>
 <br>
-<hr>
 <br>
-<h1>Products</h1>
-<% @products.each do |product| %>
-  <li><%= link_to product.name, product_reviews_path(product) %></li>
+<div class="card">
+  <h1>Products</h1>
+  <% @products.each do |product| %>
+  <li><%= link_to product.name, product_path(product) %></li>
   <% end %>
-<br>
-<hr>
-<br>
-<%= link_to "Return to Main Page", products_path %>
+</div>
