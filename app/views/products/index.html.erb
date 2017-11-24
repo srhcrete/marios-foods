@@ -1,21 +1,28 @@
 <br><br><br>
 <div class="card">
-  <p>We sell food products. Specialty ones. Fuhgeddaboudit.</p>
+  <div class="text_card">
+    <h3>About Mario's</h3>
+    <p>We sell food products. Specialty ones. Fuhgeddaboudit.</p>
+  </div>
 </div>
 <br><br><br>
 <div class="row">
   <div class="col-sm-6">
     <div class="card">
-      <h3>Featured Product:</h3>
-      <%= link_to @featured.name, product_path(@featured) %>
+      <div class="text_card">
+        <h3>Featured Product:</h3>
+        <%= link_to @featured.name, product_path(@featured) %>
+      </div>
     </div>
   </div>
   <div class="col-sm-6">
     <div class="card">
-      <h3>Newest Products:</h3>
-      <% @lastThree.each do |product| %>
-      <li><%= link_to product.name, product_path(product) %></li>
-      <% end %>
+      <div class="text_card">
+        <h3>Newest Products:</h3>
+        <% @lastThree.each do |product| %>
+        <li><%= link_to product.name, product_path(product) %></li>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

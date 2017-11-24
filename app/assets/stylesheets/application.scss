@@ -1,5 +1,10 @@
 @import 'bootstrap';
 
+@font-face {
+  font-family: "philosopher";
+  src: url(Philosopher-Italic.ttf) format('truetype');
+}
+
 body {
   background: url(cool-food.jpg) no-repeat;
   -webkit-background-size: cover;
@@ -8,7 +13,17 @@ body {
   background-size: cover;
 }
 
+html a {
+  color: #f4e5d7;
+  text-shadow: 0.01px 0.01px 0.01px black;
+}
+
+html a:hover {
+  color: #ce4527;
+}
+
 header {
+  font-family: philosopher;
   padding: 50px;
   width: 100%;
   background-color: rgba(128, 143, 208, 0.75);
@@ -17,11 +32,20 @@ header {
 
 .form_button {
   background-color: #5072a8;
+  border: none;
 }
 
 .form_text_field {
 
 }
+
+// .text_card {
+//   padding: 10px;
+//   vertical-align: center;
+//   border-radius: 25px;
+//   border-color: brown;
+//   background-color: rgba(106, 106, 200, 0.75);
+// }
 
 .card {
   margin-left: 30px;
@@ -29,5 +53,19 @@ header {
   padding: 20px;
   vertical-align: center;
   border-style: inset;
-  background-color: rgba(128, 143, 208, 0.75);
+  border-radius: 23px;
+  background-color: rgba(128, 143, 208, 0.80);
+}
+
+.product_card {
+  margin-left: 30px;
+  margin-right: 30px;
+  padding: 20px;
+  vertical-align: center;
+  border-radius: 23px;
+  background-color: rgba(128, 143, 208, 0.85);
+}
+
+li {
+  list-style: none;
 }
