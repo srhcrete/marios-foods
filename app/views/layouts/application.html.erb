@@ -9,8 +9,8 @@
   </head>
   <header>
     <h1>Welcome to Mario's Specialty Food Products</h1>
-    <%= link_to "See all products", new_product_path %>
-    <%= link_to 'Return to Home', products_path %>
+    <h5 id='all_products_link'><%= link_to 'See all products', new_product_path %></h5>
+    <h5 id='home_link'><%= link_to 'Return to Home', products_path %></h5>
   </header>
   <body>
     <%= yield %>

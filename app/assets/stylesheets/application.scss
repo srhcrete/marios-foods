@@ -42,6 +42,17 @@ header {
   z-index: 1
 }
 
+#all_products_link {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+}
+
+#home_link {
+  display: inline;
+  margin-left: 10px;
+}
+
 .form_button {
   background-color: #5072a8;
   border: none;
@@ -99,6 +110,7 @@ header {
 }
 
 .text_card {
+  height: 100%;
   padding: 10px;
   vertical-align: center;
   border-radius: 25px;
@@ -106,6 +118,7 @@ header {
 }
 
 .card {
+  height: 100%;
   width: 86%;
   margin-left: 8%;
   margin-right: 30px;
@@ -127,6 +140,18 @@ header {
   vertical-align: center;
   border-radius: 23px;
   background-color: rgba(128, 143, 208, 0.85);
+}
+
+.new_product_form_card {
+  height: 25%;
+  width: 86%;
+  margin-left: 8%;
+  margin-right: 30px;
+  padding: 20px;
+  vertical-align: center;
+  border-style: none;
+  border-radius: 23px;
+  background-color: rgba(128, 143, 208, 0.80);
 }
 
 li {

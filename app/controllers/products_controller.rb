@@ -2,11 +2,12 @@ class ProductsController < ApplicationController
   def index
     @featured = Product.featured.first
     @lastThree = Product.lastThree.limit(3)
+    @usa = Product.usa
   end
 
   def new
-    @products = Product.all
     @product = Product.new
+    @products = Product.all
   end
 
   def create

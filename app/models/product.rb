@@ -12,4 +12,9 @@ class Product < ActiveRecord::Base
   scope :lastThree, -> {
     order('created_at DESC')
   }
+
+  scope :usa, -> {
+    where(country: 'South Africa')
+  }
+
 end
