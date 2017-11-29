@@ -14,7 +14,7 @@ class Product < ActiveRecord::Base
   }
 
   scope :usa, -> {
-    where(country: 'South Africa')
+    where(country: 'United States')
   }
 
 end
