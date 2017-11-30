@@ -54,7 +54,10 @@ header {
 }
 
 #back_to_product_link {
-  float: right !important;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 30%;
 }
 
 .form_button {
@@ -99,9 +102,7 @@ header {
 }
 
 .product_form_label {
-  margin-right: -50px;
   padding-left: 20px;
-  // display: block;
   width: 20%;
   float: left;
   clear: left;
@@ -123,8 +124,22 @@ header {
 }
 
 .card {
+  position: relative;
   height: 100%;
   width: 86%;
+  margin-left: 8%;
+  margin-right: 30px;
+  padding: 20px;
+  vertical-align: center;
+  border-style: none;
+  border-radius: 23px;
+  background-color: rgba(128, 143, 208, 0.80);
+}
+
+.review_card {
+  position: relative;
+  height: 100%;
+  width: 76%;
   margin-left: 8%;
   margin-right: 30px;
   padding: 20px;
@@ -148,7 +163,7 @@ header {
 }
 
 .new_product_form_card {
-  height: 25%;
+  height: 18%;
   width: 86%;
   margin-left: 8%;
   margin-right: 30px;
@@ -160,8 +175,12 @@ header {
 }
 
 .edit_product_form_card {
+  position: relative;
   height: 100%;
-  width: 50%;
+  width: 56%;
+  margin-left: 8%;
+  margin-right: 30px;
+  padding: 20px;
   vertical-align: center;
   border-style: none;
   border-radius: 23px;

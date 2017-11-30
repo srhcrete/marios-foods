@@ -1,9 +1,11 @@
 <br><br><br>
-<div class='card'>
+<div class='edit_product_form_card'>
   <h3>Update <%= @product.name%></h3>
   <p>
     <%= flash[:notice] %>
   </p>
   <%= render 'form' %>
-  <%= link_to 'Back to Product Page', product_path(@product) %>
+  <p id='back_to_product_link'>
+    <%= link_to 'Back to Product Page', product_path(@product) %>
+  </p>
 </div>

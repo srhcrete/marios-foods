@@ -1,9 +1,11 @@
 <br><br>
-<div class="card">
+<div class="review_card">
   <h3>Add a review for <%= @product.name%></h3>
   <p>
     <%= flash[:notice] %>
   </p>
   <%= render 'form' %>
-  <%= link_to 'Back to Product Page', product_path(@product) %>
+  <p id='back_to_product_link'>
+    <%= link_to 'Back to Product Page', product_path(@product) %>
+  </p>
 </div>
