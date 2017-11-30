@@ -14,7 +14,7 @@
         <h3>Made in the USA</h3>
         <% @usa.each do |product| %>
         <li><%= link_to product.name,
-        products_path(product) %></li>
+        product_path(product) %></li>
         <% end %>
       </div>
     </div>

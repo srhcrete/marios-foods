@@ -53,6 +53,10 @@ header {
   margin-left: 10px;
 }
 
+#back_to_product_link {
+  float: right !important;
+}
+
 .form_button {
   background-color: #5072a8;
   border: none;
@@ -95,8 +99,9 @@ header {
 }
 
 .product_form_label {
+  margin-right: -50px;
   padding-left: 20px;
-  display: block;
+  // display: block;
   width: 20%;
   float: left;
   clear: left;
@@ -106,7 +111,7 @@ header {
 .product_form_button {
   background-color: #5072a8;
   border: none;
-  float: right;
+  float: left;
 }
 
 .text_card {
@@ -148,6 +153,15 @@ header {
   margin-left: 8%;
   margin-right: 30px;
   padding: 20px;
+  vertical-align: center;
+  border-style: none;
+  border-radius: 23px;
+  background-color: rgba(128, 143, 208, 0.80);
+}
+
+.edit_product_form_card {
+  height: 100%;
+  width: 50%;
   vertical-align: center;
   border-style: none;
   border-radius: 23px;
